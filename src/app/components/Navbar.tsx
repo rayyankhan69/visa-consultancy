@@ -23,7 +23,7 @@ export function Navbar({ darkMode }: NavbarProps) {
     { label: "Consultation", href: "#consultation" },
     { label: "Process", href: "#process" },
     { label: "FAQ", href: "#faq" },
-    { label: "About Us", href: "#about" },
+    { label: "About Us", href: "/about-us" },
   ];
 
   const scrollTo = (href: string) => {

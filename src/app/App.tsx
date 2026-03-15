@@ -14,11 +14,13 @@ import { motion, AnimatePresence } from "motion/react";
 import { BookPage } from "./pages/BookPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { TermsOfServicePage } from "./pages/TermsOfServicePage";
+import { AboutUsPage } from "./pages/AboutUsPage";
 
 export default function App() {
   const isBookPage = typeof window !== "undefined" && window.location.pathname === "/book";
   const isPrivacyPolicyPage = typeof window !== "undefined" && window.location.pathname === "/privacy-policy";
   const isTermsOfServicePage = typeof window !== "undefined" && window.location.pathname === "/terms-of-service";
+  const isAboutUsPage = typeof window !== "undefined" && window.location.pathname === "/about-us";
 
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window === "undefined") {
@@ -92,6 +94,16 @@ export default function App() {
       <div style={{ fontFamily: "Sora, sans-serif", transition: "background 0.3s, color 0.3s" }}>
         <Navbar darkMode={darkMode} />
         <TermsOfServicePage darkMode={darkMode} />
+        <Footer darkMode={darkMode} />
+      </div>
+    );
+  }
+
+  if (isAboutUsPage) {
+    return (
+      <div style={{ fontFamily: "Sora, sans-serif", transition: "background 0.3s, color 0.3s" }}>
+        <Navbar darkMode={darkMode} />
+        <AboutUsPage darkMode={darkMode} />
         <Footer darkMode={darkMode} />
       </div>
     );
