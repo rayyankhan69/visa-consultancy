@@ -34,6 +34,114 @@ const testimonials = [
     rating: 5,
     flag: "🎓",
   },
+  {
+    name: "Usman Ali",
+    role: "Bachelor's Student – Hamburg",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+    quote:
+      "AbroadAoo provided excellent guidance for choosing the right university and preparing my documents. Their support made the entire process easy.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Ayesha Noor",
+    role: "Master's Student – Frankfurt",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+    quote:
+      "I was confused about the admission process, but AbroadAoo explained everything clearly. Thanks to them, I successfully received my admission letter.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Hamza Tariq",
+    role: "Ausbildung – Stuttgart",
+    image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=400",
+    quote:
+      "Their team helped me prepare for interviews and applications for Ausbildung programs. I am now working and studying in Germany.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Sana Malik",
+    role: "IELTS Band 7 Achiever",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400",
+    quote:
+      "The IELTS preparation sessions were very structured and helpful. The practice tests improved my confidence and helped me score well.",
+    rating: 5,
+    flag: "🎓",
+  },
+  {
+    name: "Imran Shah",
+    role: "Master's Student – Munich",
+    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=400",
+    quote:
+      "From shortlisting universities to visa interview preparation, AbroadAoo supported me throughout the journey. Highly recommended!",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Zainab Bibi",
+    role: "Bachelor's Student – Cologne",
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400",
+    quote:
+      "Their counseling sessions helped me understand my options in Germany. I am grateful for their honest and professional guidance.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Hassan Rauf",
+    role: "Ausbildung – Berlin",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+    quote:
+      "AbroadAoo helped me prepare my CV and apply to Ausbildung companies. Their professional support made a huge difference.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Maryam Iqbal",
+    role: "Master's Student – Leipzig",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400",
+    quote:
+      "I really appreciated their quick responses and detailed guidance. They made studying abroad feel achievable.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Daniyal Khan",
+    role: "IELTS Band 7 Achiever",
+    image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400",
+    quote:
+      "The IELTS instructors were very supportive and gave practical tips that helped me improve my speaking and writing scores.",
+    rating: 5,
+    flag: "🎓",
+  },
+  {
+    name: "Noor Ul Amin",
+    role: "Master's Student – Bonn",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400",
+    quote:
+      "AbroadAoo handled my application process professionally. Their experience with German universities is impressive.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Hira Saeed",
+    role: "Ausbildung – Düsseldorf",
+    image: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=400",
+    quote:
+      "I highly recommend AbroadAoo to anyone looking for Ausbildung opportunities in Germany. Their guidance is genuine and effective.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
+  {
+    name: "Salman Ahmad",
+    role: "Bachelor's Student – Bremen",
+    image: "https://images.unsplash.com/photo-1502767089025-6572583495b4?auto=format&fit=crop&w=400&q=80",
+    quote:
+      "The team guided me through document preparation, application submission, and visa steps. Their support was outstanding.",
+    rating: 5,
+    flag: "🇩🇪",
+  },
 ];
 
 export function TestimonialsSection({ darkMode }: TestimonialsSectionProps) {
