@@ -560,9 +560,7 @@ export function IletsBookingPage({ darkMode }: IletsBookingPageProps) {
         {/* Join button */}
         <div className="mt-8">
           <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/ilets-form"
             className="flex items-center justify-center w-full px-8 py-5 rounded-3xl text-sm font-semibold transition-all duration-300 hover:-translate-y-1"
             style={{
               fontFamily: "Sora, sans-serif",

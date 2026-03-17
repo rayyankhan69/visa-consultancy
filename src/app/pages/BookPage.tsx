@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "motion/react";
-import { Phone, Video, CheckCircle, Sparkles, Languages, GraduationCap } from "lucide-react";
+import { Phone, Video, CheckCircle, Sparkles, Languages, GraduationCap, User, Mail, PenLine, Image as ImageIcon } from "lucide-react";
 
 interface BookPageProps {
   darkMode: boolean;
@@ -528,25 +528,31 @@ export function BookPage({ darkMode }: BookPageProps) {
               >
                 Full Name
               </label>
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                required
-                value={fullName}
-                disabled={formDisabled}
-                onChange={(e) => {
-                  setFullName(e.target.value);
-                  if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
-                }}
-                className="mt-2 w-full rounded-2xl px-4 py-3 text-sm outline-none"
-                style={{
-                  fontFamily: "Sora, sans-serif",
-                  background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
-                  border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
-                  color: darkMode ? "#fff" : "#111",
-                }}
-              />
+              <div className="relative mt-2">
+                <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2" aria-hidden="true">
+                  <User className="w-4.5 h-4.5" style={{ color: darkMode ? "#bbb" : "#666" }} />
+                </div>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  required
+                  value={fullName}
+                  disabled={formDisabled}
+                  onChange={(e) => {
+                    setFullName(e.target.value);
+                    if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
+                  }}
+                  className="w-full rounded-2xl pr-4 py-3 pl-11 text-sm outline-none"
+                  style={{
+                    fontFamily: "Sora, sans-serif",
+                    background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
+                    border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
+                    color: darkMode ? "#fff" : "#111",
+                    height: "48px",
+                  }}
+                />
+              </div>
             </div>
 
             <div>
@@ -556,25 +562,31 @@ export function BookPage({ darkMode }: BookPageProps) {
               >
                 Email
               </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={email}
-                disabled={formDisabled}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
-                }}
-                className="mt-2 w-full rounded-2xl px-4 py-3 text-sm outline-none"
-                style={{
-                  fontFamily: "Sora, sans-serif",
-                  background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
-                  border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
-                  color: darkMode ? "#fff" : "#111",
-                }}
-              />
+              <div className="relative mt-2">
+                <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2" aria-hidden="true">
+                  <Mail className="w-4.5 h-4.5" style={{ color: darkMode ? "#bbb" : "#666" }} />
+                </div>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={email}
+                  disabled={formDisabled}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
+                  }}
+                  className="w-full rounded-2xl pr-4 py-3 pl-11 text-sm outline-none"
+                  style={{
+                    fontFamily: "Sora, sans-serif",
+                    background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
+                    border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
+                    color: darkMode ? "#fff" : "#111",
+                    height: "48px",
+                  }}
+                />
+              </div>
             </div>
 
             <div>
@@ -584,29 +596,34 @@ export function BookPage({ darkMode }: BookPageProps) {
               >
                 WhatsApp Number
               </label>
-              <input
-                id="whatsapp"
-                name="whatsapp"
-                type="tel"
-                required
-                pattern="^(?:\\+?92[\\s-]*|0)?3\\d{2}[\\s-]*\\d{7}$"
-                title="Enter a valid WhatsApp number (e.g., 3101234567, 03101234567, +923101234567, or +92 310 1234567)"
-                value={whatsapp}
-                disabled={formDisabled}
-                onChange={(e) => {
-                  setWhatsapp(e.target.value);
-                  if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
-                }}
-                placeholder="e.g., +92 3XX XXXXXXX"
-                className="mt-2 w-full rounded-2xl px-4 py-3 text-sm outline-none"
-                style={{
-                  fontFamily: "Sora, sans-serif",
-                  background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
-                  border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
-                  color: darkMode ? "#fff" : "#111",
-                  height: "48px",
-                }}
-              />
+              <div className="relative mt-2">
+                <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2" aria-hidden="true">
+                  <Phone className="w-4.5 h-4.5" style={{ color: darkMode ? "#bbb" : "#666" }} />
+                </div>
+                <input
+                  id="whatsapp"
+                  name="whatsapp"
+                  type="tel"
+                  required
+                  pattern="^(?:\\+?92[\\s-]*|0)?3\\d{2}[\\s-]*\\d{7}$"
+                  title="Enter a valid WhatsApp number (e.g., 3101234567, 03101234567, +923101234567, or +92 310 1234567)"
+                  value={whatsapp}
+                  disabled={formDisabled}
+                  onChange={(e) => {
+                    setWhatsapp(e.target.value);
+                    if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
+                  }}
+                  placeholder="e.g., +92 3XX XXXXXXX"
+                  className="w-full rounded-2xl pr-4 py-3 pl-11 text-sm outline-none"
+                  style={{
+                    fontFamily: "Sora, sans-serif",
+                    background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
+                    border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
+                    color: darkMode ? "#fff" : "#111",
+                    height: "48px",
+                  }}
+                />
+              </div>
             </div>
 
             <div>
@@ -699,24 +716,29 @@ export function BookPage({ darkMode }: BookPageProps) {
               >
                 Extra Note (Optional)
               </label>
-              <textarea
-                id="extraNote"
-                name="extraNote"
-                value={extraNote}
-                disabled={formDisabled}
-                onChange={(e) => {
-                  setExtraNote(e.target.value);
-                  if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
-                }}
-                className="mt-2 w-full rounded-2xl px-4 py-3 text-sm outline-none min-h-[110px]"
-                style={{
-                  fontFamily: "Sora, sans-serif",
-                  background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
-                  border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
-                  color: darkMode ? "#fff" : "#111",
-                  resize: "vertical",
-                }}
-              />
+              <div className="relative mt-2">
+                <div className="pointer-events-none absolute left-4 top-4" aria-hidden="true">
+                  <PenLine className="w-4.5 h-4.5" style={{ color: darkMode ? "#bbb" : "#666" }} />
+                </div>
+                <textarea
+                  id="extraNote"
+                  name="extraNote"
+                  value={extraNote}
+                  disabled={formDisabled}
+                  onChange={(e) => {
+                    setExtraNote(e.target.value);
+                    if (submitStatus.state === "error") setSubmitStatus({ state: "idle" });
+                  }}
+                  className="w-full rounded-2xl pr-4 py-3 pl-11 text-sm outline-none min-h-[110px]"
+                  style={{
+                    fontFamily: "Sora, sans-serif",
+                    background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(212,184,150,0.18)",
+                    border: darkMode ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(196,168,130,0.2)",
+                    color: darkMode ? "#fff" : "#111",
+                    resize: "vertical",
+                  }}
+                />
+              </div>
             </div>
           </div>
 
@@ -728,6 +750,7 @@ export function BookPage({ darkMode }: BookPageProps) {
             }}
           >
             <div
+              className="flex items-center gap-2"
               style={{
                 fontFamily: "Sora, sans-serif",
                 fontSize: "0.85rem",
@@ -736,6 +759,7 @@ export function BookPage({ darkMode }: BookPageProps) {
                 marginBottom: 10,
               }}
             >
+              <ImageIcon className="w-4.5 h-4.5" style={{ color: darkMode ? "#D4B896" : "#8B6B4A" }} />
               Upload Payment Screenshot
             </div>
 
@@ -959,9 +983,9 @@ export function BookPage({ darkMode }: BookPageProps) {
               className="flex items-center justify-center gap-3 w-full px-8 py-5 rounded-3xl text-sm font-semibold transition-all duration-300 hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
               style={{
                 fontFamily: "Sora, sans-serif",
-                background: "#25D366",
+                background: "linear-gradient(135deg, #D4B896, #C4A882)",
                 color: "#fff",
-                boxShadow: darkMode ? "0 14px 45px rgba(0,0,0,0.45)" : "0 14px 45px rgba(37,211,102,0.25)",
+                boxShadow: darkMode ? "0 14px 45px rgba(0,0,0,0.45)" : "0 14px 45px rgba(196,168,130,0.25)",
               }}
             >
               <CheckCircle className="w-5 h-5" />

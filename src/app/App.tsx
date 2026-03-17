@@ -16,10 +16,12 @@ import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { TermsOfServicePage } from "./pages/TermsOfServicePage";
 import { AboutUsPage } from "./pages/AboutUsPage";
 import { IletsBookingPage } from "./pages/IletsBookingPage";
+import { IletsFormPage } from "./pages/IletsFormPage";
 
 export default function App() {
   const isBookPage = typeof window !== "undefined" && window.location.pathname === "/book";
   const isIletsBookingPage = typeof window !== "undefined" && window.location.pathname === "/ilets-booking";
+  const isIletsFormPage = typeof window !== "undefined" && window.location.pathname === "/ilets-form";
   const isPrivacyPolicyPage = typeof window !== "undefined" && window.location.pathname === "/privacy-policy";
   const isTermsOfServicePage = typeof window !== "undefined" && window.location.pathname === "/terms-of-service";
   const isAboutUsPage = typeof window !== "undefined" && window.location.pathname === "/about-us";
@@ -130,6 +132,16 @@ export default function App() {
       <div style={{ fontFamily: "Sora, sans-serif", transition: "background 0.3s, color 0.3s" }}>
         <Navbar darkMode={darkMode} />
         <IletsBookingPage darkMode={darkMode} />
+        <Footer darkMode={darkMode} />
+      </div>
+    );
+  }
+
+  if (isIletsFormPage) {
+    return (
+      <div style={{ fontFamily: "Sora, sans-serif", transition: "background 0.3s, color 0.3s" }}>
+        <Navbar darkMode={darkMode} />
+        <IletsFormPage darkMode={darkMode} />
         <Footer darkMode={darkMode} />
       </div>
     );
